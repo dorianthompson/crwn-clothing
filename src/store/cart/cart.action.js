@@ -25,7 +25,7 @@ const removeCartItem = (cartItems, cartItemToRemove) => {
     
     if(existingCartItem.quantity === 1){
         return cartItems.filter((cartItem) => {
-            return cartItem.id != cartItemToRemove.id;
+            return cartItem.id !== cartItemToRemove.id;
         });
     }
   
@@ -39,7 +39,7 @@ const removeCartItem = (cartItems, cartItemToRemove) => {
 
 const clearCartItem = (cartItems, cartItemToClear) => {
     return cartItems.filter((cartItem) => {
-        return cartItem.id != cartItemToClear.id;
+        return cartItem.id !== cartItemToClear.id;
     });
 }
 
@@ -59,4 +59,3 @@ export const clearItemFromCart = (cartItems, cartItemToClear) => {
     const newCartItems = clearCartItem(cartItems, cartItemToClear);
     return createAction(CART_ACTION_TYPES.SET_CART_ITEMS,newCartItems);
 }
-
