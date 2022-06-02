@@ -1,13 +1,12 @@
-import { useDispatch } from 'react-redux';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 
-import { selectCartItems } from '../../store/cart/cart.selector.js';
+import { selectCartItems } from '../../store/cart/cart.selector';
 
 import { 
     clearItemFromCart,
     addItemToCart,
     removeItemFromCart
- } from '../../store/cart/cart.action.js';
+ } from '../../store/cart/cart.action';
 
 import { 
     Arrow, 
