@@ -3,7 +3,7 @@ import {
     all,
     call,
     put
-} from 'redux-saga/effects';
+} from 'typed-redux-saga/macro';
 
 import { getCategoriesAndDocuments } from '../../utils/firebase/firebase.utils';
 
@@ -16,10 +16,10 @@ import { CATEGORIES_ACTION_TYPES } from './category.types';
 
 export function* fetchCategoriesAsync(){
     try {
-        const categoriesArray = yield call(getCategoriesAndDocuments, 'categories');
-        yield put(fetchCategoriesSucess(categoriesArray));
+        const categoriesArray = yield* call(getCategoriesAndDocuments);
+        yield* put(fetchCategoriesSucess(categoriesArray));
     }catch(error){
-        yield put(fetchCategoriesFailed(error));
+        yield* put(fetchCategoriesFailed(error as Error));
     }
 }
 

@@ -9,7 +9,7 @@ import {
     CartDropwdownContainer,
     CartItems,
     EmptyMessage,
-} from './cart-dropdown.styles.jsx';
+} from './cart-dropdown.styles';
 
 const CartDropwdown = () => {
     const cartItems = useSelector(selectCartItems);
