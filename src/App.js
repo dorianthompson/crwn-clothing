@@ -12,7 +12,7 @@ const Home = lazy(() => import('./routes/home/home.component'));
 const Authentication = lazy(() => import('./routes/authentication/authentication'));
 const Navigation = lazy(() => import('./routes/navigation/navigation.component'));
 const Shop = lazy(() => import('./routes/shop/shop.component'));
-const Checkout = lazy(() => import('./routes/shop/shop.component'));
+const Checkout = lazy(() => import('./routes/checkout/checkout.component'));
 
 const App = () => {
   const dispatch = useDispatch();
